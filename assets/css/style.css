@@ -175,4 +175,71 @@ input[type="password"] {
   color: #fff;
   cursor: pointer;
   margin-right: 4px;
+.admin-stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 26px;
+  color: #1a1a2e;
+}
+
+.admin-links {
+  display: flex;
+  gap: 10px;
+}
+.auth-form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.auth-form input {
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.auth-form button {
+    padding: 10px;
+    background-color: #1a1a2e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-box {
+    background-color: #fdecea;
+    color: #b71c1c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.success-box {
+    background-color: #e6f4ea;
+    color: #1e4620;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    color: #ccc;
+    margin-left: 20px;
 }
