@@ -5,3 +5,24 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE movies (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(150) NOT NULL,
+  description TEXT,
+  genre VARCHAR(100),
+  duration_minutes INT,
+  poster_url VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE showtimes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  movie_id INT NOT NULL,
+  hall_name VARCHAR(50) NOT NULL,
+  show_date DATE NOT NULL,
+  show_time TIME NOT NULL,
+  price DECIMAL(6,2) NOT NULL,
+  total_seats INT NOT NULL DEFAULT 50,
+  FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
+);
