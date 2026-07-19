@@ -43,3 +43,4 @@ $showtimes = $stmt2->get_result();
 </div>
 
 <?php include '../includes/footer.php'; ?>
+
