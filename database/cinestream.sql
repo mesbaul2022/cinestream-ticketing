@@ -26,3 +26,24 @@ CREATE TABLE showtimes (
   total_seats INT NOT NULL DEFAULT 50,
   FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE
 );
+
+CREATE TABLE bookings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  showtime_id INT NOT NULL,
+  total_price DECIMAL(8,2) NOT NULL,
+  status VARCHAR(20) NOT NULL DEFAULT 'confirmed',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (showtime_id) REFERENCES showtimes(id) ON DELETE CASCADE
+);
+
+CREATE TABLE booking_seats (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  booking_id INT NOT NULL,
+  showtime_id INT NOT NULL,
+  seat_number VARCHAR(10) NOT NULL,
+  FOREIGN KEY (booking_id) REFERENCES bookings(id) ON DELETE CASCADE,
+  FOREIGN KEY (showtime_id) REFERENCES showtimes(id) ON DELETE CASCADE,
+  UNIQUE KEY unique_seat_per_show (showtime_id, seat_number)
+);
