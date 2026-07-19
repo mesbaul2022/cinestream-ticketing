@@ -243,3 +243,39 @@ input[type="password"] {
     color: #ccc;
     margin-left: 20px;
 }
+
+
+.admin-form, .admin-form-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.admin-form-inline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    align-items: center;
+}
+
+.admin-form input, .admin-form textarea,
+.admin-form-inline input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.admin-movie-block {
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.btn-delete {
+    color: #b71c1c;
+    margin-left: 10px;
+    font-size: 13px;
+}
