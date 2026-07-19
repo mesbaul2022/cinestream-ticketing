@@ -42,8 +42,5 @@ $showtimes = $stmt2->get_result();
 <?php endif; ?>
 </div>
 
-<<<<<<< HEAD
 <?php include '../includes/footer.php'; ?>
-=======
-<?php include '../includes/footer.php'; ?>
->>>>>>> 477501bcb0c25db67eb3d6bfe78b3e5950420564
+
